@@ -104,3 +104,5 @@ This project is open source and available under the [MIT License](LICENSE).
 <!-- Pair Silver Contribution #6 -->
 
 <!-- Pair Silver Contribution #7 -->
+
+<!-- Pair Silver Contribution #8 -->
