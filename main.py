@@ -59,6 +59,7 @@ def get_repo_summary(repo):
         "languages": [],
         "topics": [],
         "owner": repo.owner.login,
+        "private": repo.private,
         "readme_content": ""
     }
 
@@ -310,7 +311,11 @@ def generate_markdown(projects):
              
         tech_stack_html = " ".join(badges)
 
-        md_output += f"| **[{display_name}]({url})** | {tech_stack_html} |\n"
+        if project.get("private", True):
+            project_cell = f"🔒 **{display_name}**"
+        else:
+            project_cell = f"**[{display_name}]({url})**"
+        md_output += f"| {project_cell} | {tech_stack_html} |\n"
     
     md_output += "\n---\n\n"
     
@@ -323,8 +328,12 @@ def generate_markdown(projects):
         if not readme:
             readme = "*No detailed README available.*"
             
-        md_output += f"<details>\n"
-        md_output += f"<summary><b>🔍 {display_name}</b> - Click to expand</summary>\n\n"
+        if project.get("private", True):
+            md_output += f"<details>\n"
+            md_output += f"<summary>🔒 <b>{display_name}</b> — <i>Private Repository</i></summary>\n\n"
+        else:
+            md_output += f"<details>\n"
+            md_output += f"<summary>🔍 <b><a href=\"{project['url']}\">{display_name}</a></b> — Click to expand</summary>\n\n"
         md_output += f"{readme}\n"
         md_output += f"\n</details>\n<br/>\n\n"
 

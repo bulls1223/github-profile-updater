@@ -6,26 +6,26 @@
 
 | Project | Tech Stack (Languages & Tools) |
 | :--- | :--- |
-| **[ValueLinkU Platform (VLU)](https://github.com/valuelinku-platform/vlu-platform)** | <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> |
-| **[vlu-scheduler (ValueLinkU Scheduler)](https://github.com/valuelinku-platform/vlu-scheduler)** | <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> <img src="https://img.shields.io/badge/Shell-89E051?style=flat-square&logo=gnu-bash&logoColor=white" alt="Shell" height="18" /> <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" alt="Oracle" height="18" /> |
-| **[ValueLinkU Platform API 🚢](https://github.com/valuelinku-platform/vlu-platform-api)** | <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" alt="Oracle" height="18" /> |
-| **[OptiStow Solution (Young Yeon Stowage Plan Utility)](https://github.com/valueonsys-youngyeon/optistowage)** | <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" alt="Fastify" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" height="18" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
-| **[Opti-Stow](https://github.com/valueonsys-youngyeon/homepage)** | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
-| **[VOS-OOG (ValueOnSys Out of Gauge System)](https://github.com/valueonsys-solution/vos-oog)** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/EJS-B4CA65?style=flat-square&logo=ejs&logoColor=white" alt="EJS" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> |
-| **[VOS-NME (Nonferrous Metals Exchange System)](https://github.com/valueonsys-solution/vos-nme)** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> |
-| **[AK Partners Homepage](https://github.com/axecoder-works/homepage)** | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
-| **[GLOVEW (Glove + Love + View)](https://github.com/axecoder-works/glovew-frontend)** | <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
-| **[Glovew API Server](https://github.com/axecoder-works/glovew-api)** | <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot" height="18" /> <img src="https://img.shields.io/badge/MyBatis-C70000?style=flat-square&logo=apache&logoColor=white" alt="MyBatis" height="18" /> <img src="https://img.shields.io/badge/Gradle-02303A?style=flat-square&logo=gradle&logoColor=white" alt="Gradle" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> <img src="https://img.shields.io/badge/PLSQL-F80000?style=flat-square&logo=oracle&logoColor=white" alt="PLSQL" height="18" /> |
-| **[Future F Biotech (퓨처 에프 바이오텍)](https://github.com/axecoder-works/futurefbiotech)** | <img src="https://img.shields.io/badge/Gnuboard-333333?style=flat-square&logo=codio&logoColor=white" alt="Gnuboard" height="18" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" height="18" /> <img src="https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
-| **[🚛 Narmi Logistics Dashboard (나르미 운송 관리 대시보드)](https://github.com/axecoder-works/narmi)** | <img src="https://img.shields.io/badge/AdminLTE-F012BE?style=flat-square&logo=adminlte&logoColor=white" alt="AdminLTE" height="18" /> <img src="https://img.shields.io/badge/W2UI-0078D7?style=flat-square&logo=css3&logoColor=white" alt="W2UI" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
-| **[🔄 WebSquare to React Converter](https://github.com/valueonsys-solution/vos-websquare-converter)** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
+| 🔒 **ValueLinkU Platform (VLU)** | <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> |
+| 🔒 **vlu-scheduler (ValueLinkU Scheduler)** | <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> <img src="https://img.shields.io/badge/Shell-89E051?style=flat-square&logo=gnu-bash&logoColor=white" alt="Shell" height="18" /> <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" alt="Oracle" height="18" /> |
+| 🔒 **ValueLinkU Platform API 🚢** | <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" alt="Oracle" height="18" /> |
+| 🔒 **OptiStow Solution (Young Yeon Stowage Plan Utility)** | <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" alt="Fastify" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" height="18" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
+| 🔒 **Opti-Stow** | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
+| 🔒 **VOS-OOG (ValueOnSys Out of Gauge System)** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/EJS-B4CA65?style=flat-square&logo=ejs&logoColor=white" alt="EJS" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> |
+| 🔒 **VOS-NME (Nonferrous Metals Exchange System)** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> |
+| 🔒 **AK Partners Homepage** | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
+| 🔒 **GLOVEW (Glove + Love + View)** | <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
+| 🔒 **Glovew API Server** | <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot" height="18" /> <img src="https://img.shields.io/badge/MyBatis-C70000?style=flat-square&logo=apache&logoColor=white" alt="MyBatis" height="18" /> <img src="https://img.shields.io/badge/Gradle-02303A?style=flat-square&logo=gradle&logoColor=white" alt="Gradle" height="18" /> <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" height="18" /> <img src="https://img.shields.io/badge/PLSQL-F80000?style=flat-square&logo=oracle&logoColor=white" alt="PLSQL" height="18" /> |
+| 🔒 **Future F Biotech (퓨처 에프 바이오텍)** | <img src="https://img.shields.io/badge/Gnuboard-333333?style=flat-square&logo=codio&logoColor=white" alt="Gnuboard" height="18" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" height="18" /> <img src="https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
+| 🔒 **🚛 Narmi Logistics Dashboard (나르미 운송 관리 대시보드)** | <img src="https://img.shields.io/badge/AdminLTE-F012BE?style=flat-square&logo=adminlte&logoColor=white" alt="AdminLTE" height="18" /> <img src="https://img.shields.io/badge/W2UI-0078D7?style=flat-square&logo=css3&logoColor=white" alt="W2UI" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
+| 🔒 **🔄 WebSquare to React Converter** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
 
 ---
 
 ## 📂 Project Details
 
 <details>
-<summary><b>🔍 ValueLinkU Platform (VLU)</b> - Click to expand</summary>
+<summary>🔒 <b>ValueLinkU Platform (VLU)</b> — <i>Private Repository</i></summary>
 
 
 > **Global Digital Integrated Logistics Platform**  
@@ -158,7 +158,7 @@ public VluMessage validateSpo(WspBkgRequest inWspBkgRqst) throws Exception {
 <br/>
 
 <details>
-<summary><b>🔍 vlu-scheduler (ValueLinkU Scheduler)</b> - Click to expand</summary>
+<summary>🔒 <b>vlu-scheduler (ValueLinkU Scheduler)</b> — <i>Private Repository</i></summary>
 
 
 **ValueLinkU 플랫폼의 데이터 동기화 및 정기 작업을 담당하는 핵심 스케줄링 서버**
@@ -282,7 +282,7 @@ public void syncUser() {
 <br/>
 
 <details>
-<summary><b>🔍 ValueLinkU Platform API 🚢</b> - Click to expand</summary>
+<summary>🔒 <b>ValueLinkU Platform API 🚢</b> — <i>Private Repository</i></summary>
 
 
 > **해운 물류 데이터와 KOBC(한국해양진흥공사) 연계 서비스를 위한 통합 백엔드 플랫폼**
@@ -411,7 +411,7 @@ public class PortmisFareService {
 <br/>
 
 <details>
-<summary><b>🔍 OptiStow Solution (Young Yeon Stowage Plan Utility)</b> - Click to expand</summary>
+<summary>🔒 <b>OptiStow Solution (Young Yeon Stowage Plan Utility)</b> — <i>Private Repository</i></summary>
 
 
 > **OptiStow Solution**은 선박 적부 데이터(Stowage Plan)를 시각화하고, 다양한 형식의 해운/항만 데이터를 표준화하는 웹 기반 유틸리티입니다. 복잡한 EDI 및 적부 문서를 직관적인 적부도(Stowage Plan)로 변환하여 운영 효율성을 극대화합니다.
@@ -530,7 +530,7 @@ npm run dev
 <br/>
 
 <details>
-<summary><b>🔍 Opti-Stow</b> - Click to expand</summary>
+<summary>🔒 <b>Opti-Stow</b> — <i>Private Repository</i></summary>
 
 > **컨테이너 선박의 적재 효율과 운영 생산성을 극대화하는 지능형 솔루션**
 
@@ -627,7 +627,7 @@ npm run dev
 <br/>
 
 <details>
-<summary><b>🔍 VOS-OOG (ValueOnSys Out of Gauge System)</b> - Click to expand</summary>
+<summary>🔒 <b>VOS-OOG (ValueOnSys Out of Gauge System)</b> — <i>Private Repository</i></summary>
 
 
 > **특수 화물(OOG)의 안전한 운송을 위한 웹 기반 래싱(Lashing) 시뮬레이션 및 적재 관리 솔루션**
@@ -752,7 +752,7 @@ vos-oog/
 <br/>
 
 <details>
-<summary><b>🔍 VOS-NME (Nonferrous Metals Exchange System)</b> - Click to expand</summary>
+<summary>🔒 <b>VOS-NME (Nonferrous Metals Exchange System)</b> — <i>Private Repository</i></summary>
 
 
 > **비철금속 거래의 시작부터 체결, 물류, 서류 관리까지 완벽하게 지원하는 통합 거래소 플랫폼**
@@ -872,7 +872,7 @@ await fastify.knex('vos_nme_trading').insert(tradingData);
 <br/>
 
 <details>
-<summary><b>🔍 AK Partners Homepage</b> - Click to expand</summary>
+<summary>🔒 <b>AK Partners Homepage</b> — <i>Private Repository</i></summary>
 
 
 > **글로벌 비즈니스 확장을 위한 전략적 파트너, AK Partners의 공식 웹사이트입니다.**
@@ -961,7 +961,7 @@ function loadResponsiveCSS(pagename) {
 <br/>
 
 <details>
-<summary><b>🔍 GLOVEW (Glove + Love + View)</b> - Click to expand</summary>
+<summary>🔒 <b>GLOVEW (Glove + Love + View)</b> — <i>Private Repository</i></summary>
 
 
 > **A trusted manufacturer of Latex disposable gloves, Examination gloves, Household gloves, and Industrial gloves in Thailand.**
@@ -1045,7 +1045,7 @@ glovew-frontend
 <br/>
 
 <details>
-<summary><b>🔍 Glovew API Server</b> - Click to expand</summary>
+<summary>🔒 <b>Glovew API Server</b> — <i>Private Repository</i></summary>
 
 
 > **Glovew 플랫폼을 위한 견고하고 유연한 백엔드 API 서버**
@@ -1141,7 +1141,7 @@ glovew-api
 <br/>
 
 <details>
-<summary><b>🔍 Future F Biotech (퓨처 에프 바이오텍)</b> - Click to expand</summary>
+<summary>🔒 <b>Future F Biotech (퓨처 에프 바이오텍)</b> — <i>Private Repository</i></summary>
 
 
 > **혁신적인 바이오 테크놀로지 기업을 위한 통합 웹 플랫폼**
@@ -1253,7 +1253,7 @@ futurefbiotech/
 <br/>
 
 <details>
-<summary><b>🔍 🚛 Narmi Logistics Dashboard (나르미 운송 관리 대시보드)</b> - Click to expand</summary>
+<summary>🔒 <b>🚛 Narmi Logistics Dashboard (나르미 운송 관리 대시보드)</b> — <i>Private Repository</i></summary>
 
 
 > **효율적인 화물/운송 관리를 위한 웹 기반 Admin 대시보드 솔루션**
@@ -1369,7 +1369,7 @@ let newTab = $("<li>", {
 <br/>
 
 <details>
-<summary><b>🔍 🔄 WebSquare to React Converter</b> - Click to expand</summary>
+<summary>🔒 <b>🔄 WebSquare to React Converter</b> — <i>Private Repository</i></summary>
 
 
 **WebSquare XML 파일을 최신 React 컴포넌트로 손쉽게 변환해주는 강력한 마이그레이션 도구**  
