@@ -110,3 +110,5 @@ This project is open source and available under the [MIT License](LICENSE).
 <!-- Pair Silver Contribution #9 -->
 
 <!-- Public YOLO Badge Trigger -->
+
+<!-- Public Pair Badge Trigger #1 -->
