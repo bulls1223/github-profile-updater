@@ -114,3 +114,5 @@ This project is open source and available under the [MIT License](LICENSE).
 <!-- Public Pair Badge Trigger #1 -->
 
 <!-- Public Pair Badge Trigger #2 -->
+
+<!-- Public Pair Badge Trigger #3 -->
