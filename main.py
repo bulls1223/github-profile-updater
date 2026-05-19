@@ -81,7 +81,11 @@ def get_repo_summary(repo):
         lines = content.split('\n')
         for line in lines:
             if line.startswith("# "):
-                summary["display_name"] = line[2:].strip()
+                raw_name = line[2:].strip()
+                # Remove Korean characters and any resulting empty parentheses
+                clean_name = re.sub(r'[가-힣ㄱ-ㅎㅏ-ㅣ]', '', raw_name)
+                clean_name = re.sub(r'\s*\(\s*\)', '', clean_name).strip()
+                summary["display_name"] = clean_name
                 break
         
         summary["readme_content"] = clean_readme_content(content)
@@ -268,10 +272,6 @@ def generate_markdown(projects):
     
     for project in projects:
         display_name = project.get("display_name", project["name"])
-        # Remove Korean characters and any resulting empty parentheses
-        display_name = re.sub(r'[가-힣ㄱ-ㅎㅏ-ㅣ]', '', display_name)
-        display_name = re.sub(r'\s*\(\s*\)', '', display_name).strip()
-        
         url = project["url"]
         
         # Build Rich Tech Stack Badges

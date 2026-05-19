@@ -874,168 +874,87 @@ await fastify.knex('vos_nme_trading').insert(tradingData);
 <details>
 <summary>🔒 <b>AK Partners Homepage</b> — <i>Private Repository</i></summary>
 
-
-
-> **글로벌 비즈니스 확장을 위한 전략적 파트너, AK Partners의 공식 웹사이트입니다.**
-
-> GCC 지역 및 전 세계 10개국 네트워크를 바탕으로 경영 컨설팅, 시장 진입 전략, 법률/규제 자문 등 전문 서비스를 소개하는 반응형 웹 프로젝트입니다.
-
->
-
-> 🌐 **Official Website**: [https://www.akpartnersinc.com/](https://www.akpartnersinc.com/)
-
-
-
----
-
-
-
-## 🛠 Tech Stack
-
-
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-
-![w2ui](https://img.shields.io/badge/Library-w2ui-blue?style=flat-square)
-
-
-
-## ✨ Key Features
-
-
-
-- **반응형 웹 디자인 (Responsive Web Design)**
-
-  - 접속 기기의 해상도(800px 기준) 및 화면 방향(Portrait/Landscape)을 감지하여 최적화된 CSS(`.min.css` vs `.m.min.css`)를 동적으로 로드합니다.
-
-- **인터랙티브 인트로 (Interactive Intro)**
-
-  - 메인 화면 진입 시 마우스 움직임에 반응하는 별(Star) 트레일 애니메이션 효과를 구현하여 사용자 몰입도를 높였습니다.
-
-- **자동/수동 내비게이션**
-
-  - 인트로 페이지에서 10초 후 메인 콘텐츠(`aboutus.html`)로 자동 리다이렉트되거나, 클릭 시 즉시 이동하는 UX를 제공합니다.
-
-- **다국어 및 기업 정보 제공**
-
-  - 회사 소개(About Us), 전문 분야(Expertise), 서비스(Services) 등 다양한 기업 정보를 체계적으로 구성한 멀티 페이지 구조입니다.
-
-
-
-## 📂 Project Structure
-
-
-
-```bash
-
-.
-
-├── css/                # 스타일시트 (배포용 minified 파일)
-
-├── js/                 # 자바스크립트 (배포용 minified 파일 및 라이브러리)
-
-├── images/             # 이미지 자산 (WebP 포맷 최적화)
-
-├── pages/              # 주요 HTML 페이지 (About Us, Services 등)
-
-├── original/           # 소스 코드 원본 (Unminified CSS/JS)
-
-│   ├── css/            # 개발용 원본 CSS 파일
-
-│   └── js/             # 개발용 원본 JS 파일 (Core Logic 확인 가능)
-
-└── index.html          # 프로젝트 진입점 (Intro Page)
-
-```
-
-
-
-## 🚀 Getting Started
-
-
-
-이 프로젝트는 별도의 빌드 과정 없이 정적(Static) 파일로 실행 가능합니다.
-
-
-
-### Prerequisites
-
-- 웹 브라우저 (Chrome, Edge, Safari 등 최신 브라우저 권장)
-
-- (선택 사항) 로컬 테스트를 위한 간단한 웹 서버 (VS Code Live Server, Python http.server 등)
-
-
-
-### Installation & Run
-
-
-
-1. **Clone the repository**
-
-   ```bash
-
-   git clone <repository-url>
-
-   cd homepage
-
-   ```
-
-
-
-2. **Run locally**
-
-   - **방법 1**: `index.html` 파일을 브라우저에서 직접 열기.
-
-   - **방법 2 (권장)**: VS Code의 **Live Server** 확장 프로그램 등을 사용하여 실행.
-
-
-
-## 💡 Core Logic
-
-
-
-프로젝트의 핵심 로직은 `original/js/main.js`에 구현되어 있으며, 주요 기능은 다음과 같습니다.
-
-
-
-### Dynamic CSS Loading (`loadResponsiveCSS`)
-
-클라이언트의 뷰포트 너비와 화면 방향을 실시간으로 감지하여, 모바일(`*.m.min.css`)과 데스크탑(`*.min.css`)용 스타일시트를 동적으로 교체합니다. 이를 통해 모든 기기에서 최적화된 레이아웃을 보장합니다.
-
-
-
-```javascript
-
-// original/js/main.js 예시 로직
-
-function loadResponsiveCSS(pagename) {
-
-  const width = document.documentElement.clientWidth;
-
-  if (width <= 800) {
-
-    // 모바일용 CSS 로드
-
-    css_filename += ".m.min.css";
-
-  } else {
-
-    // 데스크탑용 CSS 로드
-
-    css_filename += ".min.css";
-
-  }
-
-  // ... (캐싱 방지 버전 관리 포함)
-
-}
-
-```
-
+
+> **글로벌 비즈니스 확장을 위한 전략적 파트너, AK Partners의 공식 웹사이트입니다.**
+> GCC 지역 및 전 세계 10개국 네트워크를 바탕으로 경영 컨설팅, 시장 진입 전략, 법률/규제 자문 등 전문 서비스를 소개하는 반응형 웹 프로젝트입니다.
+>
+> 🌐 **Official Website**: [https://www.akpartnersinc.com/](https://www.akpartnersinc.com/)
+
+---
+
+## 🛠 Tech Stack
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![w2ui](https://img.shields.io/badge/Library-w2ui-blue?style=flat-square)
+
+## ✨ Key Features
+
+- **반응형 웹 디자인 (Responsive Web Design)**
+  - 접속 기기의 해상도(800px 기준) 및 화면 방향(Portrait/Landscape)을 감지하여 최적화된 CSS(`.min.css` vs `.m.min.css`)를 동적으로 로드합니다.
+- **인터랙티브 인트로 (Interactive Intro)**
+  - 메인 화면 진입 시 마우스 움직임에 반응하는 별(Star) 트레일 애니메이션 효과를 구현하여 사용자 몰입도를 높였습니다.
+- **자동/수동 내비게이션**
+  - 인트로 페이지에서 10초 후 메인 콘텐츠(`aboutus.html`)로 자동 리다이렉트되거나, 클릭 시 즉시 이동하는 UX를 제공합니다.
+- **다국어 및 기업 정보 제공**
+  - 회사 소개(About Us), 전문 분야(Expertise), 서비스(Services) 등 다양한 기업 정보를 체계적으로 구성한 멀티 페이지 구조입니다.
+
+## 📂 Project Structure
+
+```bash
+.
+├── css/                # 스타일시트 (배포용 minified 파일)
+├── js/                 # 자바스크립트 (배포용 minified 파일 및 라이브러리)
+├── images/             # 이미지 자산 (WebP 포맷 최적화)
+├── pages/              # 주요 HTML 페이지 (About Us, Services 등)
+├── original/           # 소스 코드 원본 (Unminified CSS/JS)
+│   ├── css/            # 개발용 원본 CSS 파일
+│   └── js/             # 개발용 원본 JS 파일 (Core Logic 확인 가능)
+└── index.html          # 프로젝트 진입점 (Intro Page)
+```
+
+## 🚀 Getting Started
+
+이 프로젝트는 별도의 빌드 과정 없이 정적(Static) 파일로 실행 가능합니다.
+
+### Prerequisites
+- 웹 브라우저 (Chrome, Edge, Safari 등 최신 브라우저 권장)
+- (선택 사항) 로컬 테스트를 위한 간단한 웹 서버 (VS Code Live Server, Python http.server 등)
+
+### Installation & Run
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd homepage
+   ```
+
+2. **Run locally**
+   - **방법 1**: `index.html` 파일을 브라우저에서 직접 열기.
+   - **방법 2 (권장)**: VS Code의 **Live Server** 확장 프로그램 등을 사용하여 실행.
+
+## 💡 Core Logic
+
+프로젝트의 핵심 로직은 `original/js/main.js`에 구현되어 있으며, 주요 기능은 다음과 같습니다.
+
+### Dynamic CSS Loading (`loadResponsiveCSS`)
+클라이언트의 뷰포트 너비와 화면 방향을 실시간으로 감지하여, 모바일(`*.m.min.css`)과 데스크탑(`*.min.css`)용 스타일시트를 동적으로 교체합니다. 이를 통해 모든 기기에서 최적화된 레이아웃을 보장합니다.
+
+```javascript
+// original/js/main.js 예시 로직
+function loadResponsiveCSS(pagename) {
+  const width = document.documentElement.clientWidth;
+  if (width <= 800) {
+    // 모바일용 CSS 로드
+    css_filename += ".m.min.css";
+  } else {
+    // 데스크탑용 CSS 로드
+    css_filename += ".min.css";
+  }
+  // ... (캐싱 방지 버전 관리 포함)
+}
+```
 
 
 </details>
