@@ -1,14 +1,26 @@
 import os
 import re
+import sys
+import struct
+import html as html_lib
+import urllib.request
+from urllib.parse import urljoin, urlparse, quote
 from github import Github
 from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
 
+# Windows consoles often default to cp949/cp1252; don't crash when printing non-ASCII titles
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(errors="replace")
+
 # Configuration
 GITHUB_PAT = os.getenv("GITHUB_PAT")
 OUTPUT_FILE = "GENERATED_PROFILE.md"
+STATS_CARD_URL = os.getenv("STATS_CARD_URL", "https://github-readme-stats.vercel.app")
+if STATS_CARD_URL and not STATS_CARD_URL.startswith(("http://", "https://")):
+    STATS_CARD_URL = "https://" + STATS_CARD_URL
 
 def get_repo_summary(repo):
     """
@@ -125,6 +137,10 @@ TECH_CONFIG = {
     "Shell": {"color": "89E051", "logo": "gnu-bash"}, 
     "EJS": {"color": "B4CA65", "logo": "ejs"},
     "PLSQL": {"color": "F80000", "logo": "oracle"},
+    "Next.js": {"color": "000000", "logo": "nextdotjs"},
+    "PostgreSQL": {"color": "4169E1", "logo": "postgresql"},
+    "Prisma": {"color": "2D3748", "logo": "prisma"},
+    "AG Grid": {"color": "1B73BA", "logo": "aggrid"},
 }
 
 # Manual Tech Stack Enrichment
@@ -171,6 +187,42 @@ EXTRA_REPO_TECH = {
     "vos-websquare-converter": ["TypeScript", "React", "Node.js"]
 }
 
+# Live Services / Recent Work
+# Public web services showcased at the top of the profile as preview cards.
+# Title, description and image are fetched from each page's Open Graph tags
+# (falling back to <title> / <meta name="description">) when the profile is generated.
+# Any of "name", "description", "image" set here overrides the fetched value.
+# "image_mode": "cover" (1200x630 style banner) or "logo" (square icon); auto-detected if omitted.
+LIVE_PROJECTS = [
+    {
+        "url": "https://tabmate.valueonsys.com/holiday-run.html",
+        "tech": ["HTML", "CSS", "JavaScript"],
+    },
+    {
+        "url": "https://tabmate.valueonsys.com",
+        "tech": ["Next.js", "React"],
+    },
+    {
+        "url": "https://ws2react.valueonsys.com/",
+        "tech": ["TypeScript", "React", "Vite", "Node.js"],
+    },
+    {
+        "url": "https://tugmate.youngyeon.com",
+        "name": "TugMate · 예선사",
+        "description": "예선사(Tug Operator) 업무 관리 SaaS. Multi-tenant · PostgreSQL · Prisma · AG Grid.",
+        "tech": ["Next.js", "React", "PostgreSQL", "Prisma", "AG Grid"],
+    },
+    {
+        "url": "https://mdm.youngyeon.com",
+        "tech": ["React", "Vite"],
+    },
+]
+
+LIVE_PROJECT_COLUMNS = 2       # cards per row
+LIVE_PROJECT_DESC_MAX = 140    # truncate long OG descriptions
+OG_FETCH_TIMEOUT = 10          # seconds
+OG_USER_AGENT = "Mozilla/5.0 (compatible; github-profile-updater)"
+
 def get_badge(name):
     """Generates a colored badge HTML img tag."""
     if not name:
@@ -186,8 +238,7 @@ def get_badge(name):
     
     # Default if not found
     if not config:
-        config = TECH_CONFIG.get("Unknown")
-        color = config.get("color")
+        color = "555555"
         logo = name.lower().replace(" ", "")
         logo_color = "white"
     else:
@@ -207,14 +258,175 @@ def get_badge(name):
 def get_language_badge(language):
     return get_badge(language)
 
-def generate_markdown(projects):
+def fetch_og_metadata(url):
+    """
+    Fetches Open Graph metadata (title, description, image, site_name) from a URL.
+    Falls back to <title> and <meta name="description">. Returns {} on failure.
+    """
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": OG_USER_AGENT})
+        with urllib.request.urlopen(req, timeout=OG_FETCH_TIMEOUT) as resp:
+            final_url = resp.geturl()
+            raw = resp.read(512 * 1024)
+        text = raw.decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"Warning: Could not fetch OG metadata for {url}. {e}")
+        return {}
+
+    meta = {}
+    for tag in re.findall(r'<meta\b[^>]*>', text, flags=re.I):
+        key_match = re.search(r'(?:property|name)\s*=\s*["\']([^"\']+)["\']', tag, flags=re.I)
+        content_match = re.search(r'content\s*=\s*["\']([^"\']*)["\']', tag, flags=re.I)
+        if key_match and content_match:
+            key = key_match.group(1).strip().lower()
+            if key not in meta:  # first occurrence wins
+                meta[key] = html_lib.unescape(content_match.group(1).strip())
+
+    title_match = re.search(r'<title[^>]*>(.*?)</title>', text, flags=re.I | re.S)
+    page_title = html_lib.unescape(title_match.group(1).strip()) if title_match else ""
+
+    image = meta.get("og:image") or meta.get("twitter:image") or ""
+    if image:
+        image = urljoin(final_url, image)
+
+    return {
+        "title": meta.get("og:title") or page_title,
+        "description": meta.get("og:description") or meta.get("description") or "",
+        "image": image,
+        "site_name": meta.get("og:site_name", ""),
+    }
+
+def get_image_size(url):
+    """Returns (width, height) for a PNG/GIF/JPEG image URL, or None if unknown."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": OG_USER_AGENT})
+        with urllib.request.urlopen(req, timeout=OG_FETCH_TIMEOUT) as resp:
+            data = resp.read(256 * 1024)
+    except Exception:
+        return None
+
+    if data[:8] == b"\x89PNG\r\n\x1a\n" and len(data) >= 24:
+        return struct.unpack(">II", data[16:24])
+    if data[:6] in (b"GIF87a", b"GIF89a") and len(data) >= 10:
+        return struct.unpack("<HH", data[6:10])
+    if data[:2] == b"\xff\xd8":
+        i = 2
+        while i + 9 < len(data):
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            if marker in (0xD8, 0x01) or 0xD0 <= marker <= 0xD7:
+                i += 2
+                continue
+            seg_len = struct.unpack(">H", data[i + 2:i + 4])[0]
+            if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+                height, width = struct.unpack(">HH", data[i + 5:i + 9])
+                return (width, height)
+            i += 2 + seg_len
+    return None
+
+def truncate_text(text, limit):
+    text = " ".join(text.split())
+    if len(text) <= limit:
+        return text
+    return text[:limit].rstrip() + "…"
+
+def resolve_live_project(cfg):
+    """Merges LIVE_PROJECTS config with fetched OG metadata into a render-ready dict."""
+    url = cfg["url"]
+    og = fetch_og_metadata(url)
+
+    name = cfg.get("name") or og.get("title") or urlparse(url).netloc
+    description = cfg.get("description") or og.get("description") or ""
+    image = cfg.get("image") or og.get("image") or ""
+
+    image_mode = cfg.get("image_mode")
+    if image and not image_mode:
+        size = get_image_size(image)
+        # Square-ish images (logos) should not be stretched to card width
+        if size and size[1] > 0 and (size[0] / size[1]) < 1.3:
+            image_mode = "logo"
+        else:
+            image_mode = "cover"
+
+    return {
+        "url": url,
+        "name": name,
+        "description": description,
+        "image": image,
+        "image_mode": image_mode or "cover",
+        "tech": cfg.get("tech", []),
+    }
+
+def render_live_project_card(project):
+    """Renders one project as HTML for use inside a <td> (no Markdown inside HTML blocks)."""
+    url = project["url"]
+    name = html_lib.escape(project["name"])
+    description = html_lib.escape(truncate_text(project["description"], LIVE_PROJECT_DESC_MAX))
+    display_url = re.sub(r"^https?://", "", url).rstrip("/")
+
+    if project["image"]:
+        if project["image_mode"] == "logo":
+            img_tag = f'<a href="{url}"><img src="{project["image"]}" alt="{name}" height="120" /></a>'
+        else:
+            img_tag = f'<a href="{url}"><img src="{project["image"]}" alt="{name}" width="100%" /></a>'
+    else:
+        # No OG image: fall back to a large badge so the card still has a visual anchor
+        placeholder = f"https://img.shields.io/badge/{quote(project['name'])}-Live%20Service-0EA5E9?style=for-the-badge"
+        img_tag = f'<a href="{url}"><img src="{placeholder}" alt="{name}" height="32" /></a>'
+
+    parts = [img_tag, f'<br/><br/><b><a href="{url}">{name}</a></b>']
+    if description:
+        parts.append(f'<br/><sub>{description}</sub>')
+    badges = " ".join(get_badge(t) for t in project["tech"])
+    if badges:
+        parts.append(f'<br/><br/>{badges}')
+    parts.append(f'<br/><br/>🔗 <a href="{url}">{display_url}</a>')
+    return "\n".join(parts)
+
+def generate_live_projects_section(live_projects):
+    """Generates the 'Recent Work · Live Services' card grid as an HTML table."""
+    if not live_projects:
+        return ""
+
+    md = "## 🌐 Recent Work · Live Services\n\n"
+    md += "> Public web services I built recently. Preview cards are generated from each site's Open Graph metadata.\n\n"
+
+    # No blank lines inside the table: GitHub treats them as the end of the HTML block.
+    cell_width = f"{100 // LIVE_PROJECT_COLUMNS}%"
+    md += "<table>\n"
+    for i in range(0, len(live_projects), LIVE_PROJECT_COLUMNS):
+        row = live_projects[i:i + LIVE_PROJECT_COLUMNS]
+        md += "  <tr>\n"
+        for project in row:
+            md += f'    <td width="{cell_width}" valign="top" align="center">\n'
+            for line in render_live_project_card(project).split("\n"):
+                md += f"      {line}\n"
+            md += "    </td>\n"
+        for _ in range(LIVE_PROJECT_COLUMNS - len(row)):
+            md += f'    <td width="{cell_width}" valign="top"></td>\n'
+        md += "  </tr>\n"
+    md += "</table>\n\n"
+    md += "---\n\n"
+    return md
+
+def generate_markdown(projects, username, stats_url, live_projects=None):
     """
     Generates a Portfolio Style Markdown:
     1. Professional History & Stats (New)
-    2. Highlights Table (Name, Stack, Desc)
-    3. Detailed collapsible sections
+    2. Recent Work · Live Services (OG preview cards)
+    3. Highlights Table (Name, Stack, Desc)
+    4. Detailed collapsible sections
     """
     md_output = "# 👨‍💻 Private Projects Portfolio\n\n"
+    
+    # --- New Section: GitHub Live Stats ---
+    md_output += "## 📊 GitHub Live Stats\n\n"
+    md_output += f"[![GitHub Stats]({stats_url}/api?username={username}&show_icons=true&theme=default&count_private=true)](https://github.com/anuraghazra/github-readme-stats) "
+    md_output += f"[![GitHub Streak](https://streak-stats.demolab.com/?user={username}&theme=default)](https://git.io/streak-stats)\n\n"
+    md_output += f"[![Top Langs]({stats_url}/api/top-langs/?username={username}&layout=compact&theme=default&count_private=true)](https://github.com/anuraghazra/github-readme-stats)\n\n"
+    md_output += "---\n\n"
     
     # --- New Section: Knowledge Sharing --- (Moved to bottom)
     # md_output += "## 🏆 Knowledge Sharing (Naver 지식iN)\n\n"
@@ -262,6 +474,9 @@ def generate_markdown(projects):
     #     md_output += f"| {period} | {project} | {company} |\n"
         
     # md_output += "\n</details>\n\n---\n\n"
+
+    # --- Section: Recent Work · Live Services ---
+    md_output += generate_live_projects_section(live_projects or [])
 
     md_output += "> Here is a collection of my private projects. Detailed information is collapsed below.\n\n"
     
@@ -360,6 +575,9 @@ def main():
         print("Error: GITHUB_PAT is not set in .env file.")
         return
 
+    # `python main.py --dry-run` generates the file locally without pushing to GitHub
+    dry_run = "--dry-run" in sys.argv[1:]
+
     g = Github(GITHUB_PAT)
     user = g.get_user()
     print(f"Authenticated as: {user.login}")
@@ -432,16 +650,26 @@ def main():
 
     projects.sort(key=get_sort_key)
 
-    markdown_content = generate_markdown(projects)
-    
+    # Fetch Open Graph metadata for public live services
+    print(f"Fetching OG metadata for {len(LIVE_PROJECTS)} live services...")
+    live_projects = []
+    for cfg in LIVE_PROJECTS:
+        resolved = resolve_live_project(cfg)
+        print(f"  {resolved['name']} ({resolved['url']}) image={'yes' if resolved['image'] else 'no'}")
+        live_projects.append(resolved)
+
+    markdown_content = generate_markdown(projects, user.login, STATS_CARD_URL, live_projects)
+
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(markdown_content)
-    
+
     print(f"Successfully generated profile summary to {OUTPUT_FILE}")
 
     # Push to GitHub Integration
     target_repo_name = os.getenv("TARGET_REPO")
-    if target_repo_name:
+    if dry_run:
+        print("Dry run: skipping GitHub push.")
+    elif target_repo_name:
         try:
             print(f"Attempting to update {target_repo_name}...")
             repo = g.get_repo(target_repo_name)

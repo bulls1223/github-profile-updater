@@ -1,5 +1,64 @@
 # 👨‍💻 Private Projects Portfolio
 
+## 📊 GitHub Live Stats
+
+[![GitHub Stats](https://github-readme-stats-beryl-two-mr69qq3vaw.vercel.app/api?username=bulls1223&show_icons=true&theme=default&count_private=true)](https://github.com/anuraghazra/github-readme-stats) [![GitHub Streak](https://streak-stats.demolab.com/?user=bulls1223&theme=default)](https://git.io/streak-stats)
+
+[![Top Langs](https://github-readme-stats-beryl-two-mr69qq3vaw.vercel.app/api/top-langs/?username=bulls1223&layout=compact&theme=default&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
+
+---
+
+## 🌐 Recent Work · Live Services
+
+> Public web services I built recently. Preview cards are generated from each site's Open Graph metadata.
+
+<table>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://tabmate.valueonsys.com/holiday-run.html"><img src="https://tabmate.valueonsys.com/holiday-run-og.png" alt="연휴 감량 증빙 시스템" width="100%" /></a>
+      <br/><br/><b><a href="https://tabmate.valueonsys.com/holiday-run.html">연휴 감량 증빙 시스템</a></b>
+      <br/><sub>연휴 동안의 러닝 기록, 출석부, 명절 음식 피해 신고를 모아 자기관리 이행률을 산출합니다. 모든 입력은 담당자가 실시간으로 지켜보고 있습니다.</sub>
+      <br/><br/><img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" />
+      <br/><br/>🔗 <a href="https://tabmate.valueonsys.com/holiday-run.html">tabmate.valueonsys.com/holiday-run.html</a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://tabmate.valueonsys.com"><img src="https://tabmate.valueonsys.com/opengraph-image?5214abc86e5fd3a2" alt="TabMate" width="100%" /></a>
+      <br/><br/><b><a href="https://tabmate.valueonsys.com">TabMate</a></b>
+      <br/><sub>Guitar Pro 악보를 브라우저에서 보고 재생하고, PDF·이미지 악보를 함께 정리하는 악보 공유 플레이어.</sub>
+      <br/><br/><img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" />
+      <br/><br/>🔗 <a href="https://tabmate.valueonsys.com">tabmate.valueonsys.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://ws2react.valueonsys.com/"><img src="https://ws2react.valueonsys.com/assets/logo.png" alt="ws2react — WebSquare 화면을 React로, 검증된 코드만" height="120" /></a>
+      <br/><br/><b><a href="https://ws2react.valueonsys.com/">ws2react — WebSquare 화면을 React로, 검증된 코드만</a></b>
+      <br/><sub>WebSquare(웹스퀘어) 화면을 React(Vite)로 변환하는 로컬 CLI 도구. 소스는 PC를 떠나지 않고, 통과한 화면은 tsc·build·렌더 검증을 거친 코드만 남깁니다. 64화면 자동 변환 100% 실측.</sub>
+      <br/><br/><img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" />
+      <br/><br/>🔗 <a href="https://ws2react.valueonsys.com/">ws2react.valueonsys.com</a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://tugmate.youngyeon.com"><img src="https://img.shields.io/badge/TugMate%20%C2%B7%20%EC%98%88%EC%84%A0%EC%82%AC-Live%20Service-0EA5E9?style=for-the-badge" alt="TugMate · 예선사" height="32" /></a>
+      <br/><br/><b><a href="https://tugmate.youngyeon.com">TugMate · 예선사</a></b>
+      <br/><sub>예선사(Tug Operator) 업무 관리 SaaS. Multi-tenant · PostgreSQL · Prisma · AG Grid.</sub>
+      <br/><br/><img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" height="18" /> <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" height="18" /> <img src="https://img.shields.io/badge/AG%20Grid-1B73BA?style=flat-square&logo=aggrid&logoColor=white" alt="AG Grid" height="18" />
+      <br/><br/>🔗 <a href="https://tugmate.youngyeon.com">tugmate.youngyeon.com</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://mdm.youngyeon.com"><img src="https://mdm.youngyeon.com/og-image.png" alt="KMTC MDM · 기준정보 관리 시스템" width="100%" /></a>
+      <br/><br/><b><a href="https://mdm.youngyeon.com">KMTC MDM · 기준정보 관리 시스템</a></b>
+      <br/><sub>Business Partner · 계정코드 · Freight · Expense · 조직 기준정보를 신청 → 합의 → 승인 → 반영 → 배포(EAI)까지 한 곳에서 관리하는 KMTC 전사 기준정보 관리 시스템</sub>
+      <br/><br/><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" height="18" />
+      <br/><br/>🔗 <a href="https://mdm.youngyeon.com">mdm.youngyeon.com</a>
+    </td>
+    <td width="50%" valign="top"></td>
+  </tr>
+</table>
+
+---
+
 > Here is a collection of my private projects. Detailed information is collapsed below.
 
 ## 🚀 Project Highlights
@@ -19,6 +78,7 @@
 | 🔒 **Future F Biotech** | <img src="https://img.shields.io/badge/Gnuboard-333333?style=flat-square&logo=codio&logoColor=white" alt="Gnuboard" height="18" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" height="18" /> <img src="https://img.shields.io/badge/Apache-D22128?style=flat-square&logo=apache&logoColor=white" alt="Apache" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> |
 | 🔒 **🚛 Narmi Logistics Dashboard** | <img src="https://img.shields.io/badge/AdminLTE-F012BE?style=flat-square&logo=adminlte&logoColor=white" alt="AdminLTE" height="18" /> <img src="https://img.shields.io/badge/W2UI-0078D7?style=flat-square&logo=css3&logoColor=white" alt="W2UI" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
 | 🔒 **🔄 WebSquare to React Converter** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
+| 🔒 **SaasMate** | <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> |
 
 ---
 
@@ -1459,6 +1519,88 @@ yarn dev
     -   XML `<body>` 내부의 UI 요소들을 순회하며, 정의된 매핑 테이블(`constants/mappings`)을 참조해 적절한 React 컴포넌트 및 HTML 태그로 변환합니다.
 5.  **Assembly**:
     -   위 과정에서 생성된 Import 구문, 타입 정의(Interface), State 선언, 이벤트 핸들러, JSX 구조를 하나의 완전한 기능수행 컴포넌트 문자열로 결합합니다.
+
+
+</details>
+<br/>
+
+<details>
+<summary>🔒 <b>SaasMate</b> — <i>Private Repository</i></summary>
+
+
+**한국형 멀티테넌트 B2B 어드민 SaaS 스타터** — 실 운영 중인 수직 SaaS에서 업종 도메인을 걷어내고 추출한 보일러플레이트입니다.
+
+Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · PostgreSQL · Prisma 7 (`@prisma/adapter-pg`) · AG Grid Community
+
+## 무엇이 들어있나
+
+| 영역 | 내용 |
+|---|---|
+| 멀티테넌시 | 테넌트/멤버십/지점(branch) 스코프 — 모든 업무 데이터는 `tenantId`(+`branchId`)로 격리 |
+| RBAC | 5역할(`ADMIN`/`OPERATOR_A`/`OPERATOR_B`/`ACCOUNTANT`/`EXECUTIVE`) × 4도메인 × 6액션. 이름은 중립 자리표시자 — 업종에 맞게 리네이밍해서 사용 |
+| 인증 | 무의존 자체 구현 — AES-256-GCM 암호화 쿠키 + PBKDF2 비밀번호 (외부 auth 라이브러리 없음) |
+| 어드민 UI | iframe 기반 MDI 멀티탭 워크스페이스 (한국 ERP 사용자에게 친숙한 패턴), AG Grid 목록 + 다이얼로그 |
+| 동적 메뉴 | DB 기반 메뉴 트리 + 역할별 메뉴 권한 매트릭스 + 운영사(플랫폼) 테넌트 게이트 |
+| i18n / 테마 | ko·en·ja·zh 4개 국어 (`pnpm i18n:sync` 자동 번역), CSS 변수 테마 |
+| 감사/로그 | 필드 수준 before/after 감사 이력(AuditLog), 접속 로그(+스크린샷), 이메일 발송 이력(재발송) |
+| kr-biz 모듈 | 은행 계좌·계정과목·세무코드 — 한국 B2B 청구/정산 SaaS 공통 마스터 |
+| 샘플 도메인 | **거래처(Client)** = 지점 스코프 마스터 풀코스 교본, **은행(Bank)** = CRUD 팩토리 최소 교본 |
+
+## 퀵스타트
+
+```bash
+pnpm install
+
+cp .env.example .env
+
+pnpm db:setup
+
+pnpm dev          # → http://localhost:3100
+```
+
+시드 계정 (비밀번호 전원 `password123!`):
+
+| 이메일 | 역할 |
+|---|---|
+| `admin@saasmate.local` | 관리자 (ADMIN) |
+| `opa@saasmate.local` | 담당자A (OPERATOR_A — 전 권한) |
+| `opb@saasmate.local` | 담당자B (OPERATOR_B — 서울지점만) |
+| `accountant@saasmate.local` | 회계 (읽기/출력 전용) |
+| `executive@saasmate.local` | 경영진 (읽기/출력 전용) |
+
+## 검증 게이트
+
+```bash
+pnpm build        # 실제 게이트
+pnpm test         # vitest 89 tests (rbac·crypto·schemas·crud-route·api-scope·audit·concurrency·format·env)
+```
+
+## 새 엔티티 추가 (30분 코스)
+
+`clients`(지점 스코프) 또는 `banks`(단순 마스터)를 그대로 복제하면 됩니다.
+
+1. `prisma/schema.prisma` 모델 추가 → `pnpm prisma migrate dev`
+2. `src/lib/schemas/<entity>.ts` — zod create/update 스키마
+3. `src/types/<entity>.ts` — 응답 타입
+4. `src/app/api/admin/<entity>/handlers.ts` — `createCrudRoutes()` 팩토리 (+ `route.ts`, `[id]/route.ts`)
+5. `src/components/admin/<entity>-grid.tsx` + `<entity>-dialog.tsx`
+6. `src/app/admin/(restricted)/<entity>/page.tsx` — `requirePageScope`
+7. `scripts/seed-menus.ts`에 프로그램/메뉴 등록 + `prisma/seed.ts`에 샘플 데이터
+8. `pnpm i18n:sync` → `pnpm build && pnpm test`
+
+자세한 아키텍처 설명은 [CLAUDE.md](CLAUDE.md), 에이전트/코딩 규칙은 [AGENTS.md](AGENTS.md) 참고.
+
+## 설계 트레이드오프 (알고 쓰기)
+
+- **iframe MDI 탭**: 한국 ERP 사용자에겐 강점(멀티탭 동시 작업), 글로벌 타깃이면 이질적일 수 있음 — 표준 라우팅으로 교체 가능.
+- **자체 구현 인증**: 외부 의존성 없음이 셀링 포인트이자 리스크. `AUTH_SECRET` 관리와 세션 만료/회전 정책은 도입사가 정할 것.
+- **RBAC 하드코딩**: 5역할·4도메인 구조는 의도적으로 설정 기반 추상화를 하지 않음 — 스타터의 이해가능성이 우선. 이름만 업종에 맞게 바꿔 쓰면 됨.
+- **권한 거부 응답**: 표준 `403` + 바디 `code`(`ROLE_DENIED` | `BRANCH_DENIED`)로 구분.
+- **AG Grid Community(MIT)**: 재배포 문제 없음. 행 그룹핑·피벗 등이 필요하면 Enterprise 라이선스 별도 구매.
+
+## 라이선스
+
+TBD
 
 
 </details>

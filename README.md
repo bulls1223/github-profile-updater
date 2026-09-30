@@ -10,6 +10,7 @@ It fetches selected repositories via the GitHub API, extracts key metadata (tech
 -   **Dynamic Tech Stack Badges**: Automatically generates shields.io badges for languages and frameworks used in each project.
 -   **Manual Enrichment**: Allows manual mapping of specific technologies (e.g., Spring Boot, AWS, Oracle) to projects for a richer portfolio.
 -   **Smart Content Cleaning**: Sanitize fetched README content by removing H1 tags and masking private images, while preserving public badges.
+-   **Live Service Cards**: Showcase public web services as preview cards. Title, description and image are fetched from each site's Open Graph tags at generation time.
 -   **Automated Updates**: Generates the markdown and directly pushes the update to your GitHub profile repository.
 -   **Custom sorting**: Organize your projects in a specific order to tell your story best.
 
@@ -44,14 +45,21 @@ python main.py
 ```
 This will:
 1.  Fetch your repositories.
-2.  Generate a `GENERATED_PROFILE.md` file locally.
-3.  Push the updated content to your target GitHub profile repository.
+2.  Fetch Open Graph metadata for the live services listed in `LIVE_PROJECTS`.
+3.  Generate a `GENERATED_PROFILE.md` file locally.
+4.  Push the updated content to your target GitHub profile repository.
+
+To preview the result without pushing:
+```bash
+python main.py --dry-run
+```
 
 ## ⚙️ Configuration
 
 You can customize the script by modifying `main.py`:
 -   **`TECH_CONFIG`**: Add or modify badge colors and logos for different technologies.
 -   **`EXTRA_REPO_TECH`**: Manually assign technologies to specific repositories.
+-   **`LIVE_PROJECTS`**: Public web services shown as "Recent Work · Live Services" cards. Each entry needs a `url`; `name`, `description`, `image`, `image_mode` (`cover`/`logo`) and `tech` are optional and override the fetched Open Graph values.
 -   **`project_order`**: Define the display order of your projects.
 
 ## 📝 License
