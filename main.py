@@ -143,6 +143,8 @@ TECH_CONFIG = {
     "AG Grid": {"color": "1B73BA", "logo": "aggrid"},
     "Three.js": {"color": "000000", "logo": "threedotjs"},
     "MUI": {"color": "007FFF", "logo": "mui"},
+    "Tailwind CSS": {"color": "06B6D4", "logo": "tailwindcss"},
+    "Supabase": {"color": "3FCF8E", "logo": "supabase"},
 }
 
 # Manual Tech Stack Enrichment
@@ -197,20 +199,32 @@ EXTRA_REPO_TECH = {
 # "image_mode": "cover" (1200x630 style banner) or "logo" (square icon); auto-detected if omitted.
 # "disabled": True renders a locked card for client/confidential work: no OG fetch, no image,
 # no link. Such entries take "name"/"description" from here only and must not set "url".
+# "group": cards are laid out in list order; consecutive entries sharing a group are placed
+# together under a heading row, and each group starts on a new row. Keep related cards adjacent
+# (they fill rows left to right, LIVE_PROJECT_COLUMNS per row).
+GROUP_MARITIME = "🚢 Maritime & Logistics"
+GROUP_CORPORATE = "🏢 Corporate Websites"
+GROUP_TOOLS = "🛠️ Tools & Side Projects"
+
 LIVE_PROJECTS = [
+    # --- Maritime & Logistics ---
+    # Row 1: cargo stowage / lashing
     {
-        "url": "https://tabmate.valueonsys.com/holiday-run.html",
-        "tech": ["HTML", "CSS", "JavaScript"],
+        "group": GROUP_MARITIME,
+        "url": "https://stowmate3d.vercel.app",
+        "tech": ["Next.js", "React", "Three.js"],
     },
     {
-        "url": "https://tabmate.valueonsys.com",
-        "tech": ["Next.js", "React"],
+        # The site has no OG tags: name and description come from the project README
+        "group": GROUP_MARITIME,
+        "url": "https://oog.valueonsys.com",
+        "name": "VOS-OOG (ValueOnSys Out of Gauge System)",
+        "description": "특수 화물(OOG)의 안전한 운송을 위한 웹 기반 래싱(Lashing) 시뮬레이션 및 적재 관리 솔루션.",
+        "tech": ["React", "Vite", "TypeScript", "MUI", "AG Grid"],
     },
+    # Row 2: business operation systems
     {
-        "url": "https://ws2react.valueonsys.com/",
-        "tech": ["TypeScript", "React", "Vite", "Node.js"],
-    },
-    {
+        "group": GROUP_MARITIME,
         "url": "https://tugmate.youngyeon.com",
         "name": "TugMate · 예선사",
         "description": "예선사(Tug Operator) 업무 관리 SaaS. Multi-tenant · PostgreSQL · Prisma · AG Grid.",
@@ -218,30 +232,50 @@ LIVE_PROJECTS = [
     },
     {
         # Confidential client project: shown disabled, client name and URL are not exposed
+        "group": GROUP_MARITIME,
         "name": "MDM · 기준정보 관리 시스템",
         "description": "Business Partner · 계정코드 · Freight · Expense · 조직 기준정보를 신청 → 합의 → 승인 → 반영 → 배포(EAI)까지 한 곳에서 관리하는 전사 기준정보 관리 시스템.",
         "tech": ["React", "Vite"],
         "disabled": True,
     },
+
+    # --- Corporate Websites ---
+    # Row 1: bio / healthcare
     {
+        "group": GROUP_CORPORATE,
         "url": "https://ffb.co.kr",
         "name": "Future F Biotech",
         "tech": ["Gnuboard", "PHP", "MySQL", "jQuery", "Bootstrap"],
     },
     {
+        "group": GROUP_CORPORATE,
+        "url": "https://www.medibric.com",
+        "tech": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "Supabase"],
+    },
+    # Row 2: consulting
+    {
+        "group": GROUP_CORPORATE,
         "url": "https://www.akpartnersinc.com",
         "tech": ["JavaScript", "HTML", "CSS"],
     },
+
+    # --- Tools & Side Projects ---
+    # Row 1: same site (tabmate.valueonsys.com)
     {
-        "url": "https://stowmate3d.vercel.app",
-        "tech": ["Next.js", "React", "Three.js"],
+        "group": GROUP_TOOLS,
+        "url": "https://tabmate.valueonsys.com",
+        "tech": ["Next.js", "React"],
     },
     {
-        # The site has no OG tags: name and description come from the project README
-        "url": "https://oog.valueonsys.com",
-        "name": "VOS-OOG (ValueOnSys Out of Gauge System)",
-        "description": "특수 화물(OOG)의 안전한 운송을 위한 웹 기반 래싱(Lashing) 시뮬레이션 및 적재 관리 솔루션.",
-        "tech": ["React", "Vite", "TypeScript", "MUI", "AG Grid"],
+        "group": GROUP_TOOLS,
+        "url": "https://tabmate.valueonsys.com/holiday-run.html",
+        "tech": ["HTML", "CSS", "JavaScript"],
+    },
+    # Row 2: developer tool
+    {
+        "group": GROUP_TOOLS,
+        "url": "https://ws2react.valueonsys.com/",
+        "tech": ["TypeScript", "React", "Vite", "Node.js"],
     },
 ]
 
@@ -370,6 +404,7 @@ def resolve_live_project(cfg):
             "image": "",
             "image_mode": "cover",
             "tech": cfg.get("tech", []),
+            "group": cfg.get("group", ""),
             "disabled": True,
         }
 
@@ -396,6 +431,7 @@ def resolve_live_project(cfg):
         "image": image,
         "image_mode": image_mode or "cover",
         "tech": cfg.get("tech", []),
+        "group": cfg.get("group", ""),
         "disabled": False,
     }
 
@@ -451,18 +487,31 @@ def generate_live_projects_section(live_projects):
 
     # No blank lines inside the table: GitHub treats them as the end of the HTML block.
     cell_width = f"{100 // LIVE_PROJECT_COLUMNS}%"
+    # Split into runs of consecutive cards sharing the same group
+    groups = []
+    for project in live_projects:
+        group = project.get("group", "")
+        if groups and groups[-1][0] == group:
+            groups[-1][1].append(project)
+        else:
+            groups.append((group, [project]))
+
     md += "<table>\n"
-    for i in range(0, len(live_projects), LIVE_PROJECT_COLUMNS):
-        row = live_projects[i:i + LIVE_PROJECT_COLUMNS]
-        md += "  <tr>\n"
-        for project in row:
-            md += f'    <td width="{cell_width}" valign="top" align="center">\n'
-            for line in render_live_project_card(project).split("\n"):
-                md += f"      {line}\n"
-            md += "    </td>\n"
-        for _ in range(LIVE_PROJECT_COLUMNS - len(row)):
-            md += f'    <td width="{cell_width}" valign="top"></td>\n'
-        md += "  </tr>\n"
+    for group, members in groups:
+        if group:
+            md += f'  <tr><th colspan="{LIVE_PROJECT_COLUMNS}" align="left">{html_lib.escape(group)}</th></tr>\n'
+        # Each group starts on a new row so unrelated cards never share one
+        for i in range(0, len(members), LIVE_PROJECT_COLUMNS):
+            row = members[i:i + LIVE_PROJECT_COLUMNS]
+            md += "  <tr>\n"
+            for project in row:
+                md += f'    <td width="{cell_width}" valign="top" align="center">\n'
+                for line in render_live_project_card(project).split("\n"):
+                    md += f"      {line}\n"
+                md += "    </td>\n"
+            for _ in range(LIVE_PROJECT_COLUMNS - len(row)):
+                md += f'    <td width="{cell_width}" valign="top"></td>\n'
+            md += "  </tr>\n"
     md += "</table>\n\n"
     md += "---\n\n"
     return md
