@@ -38,7 +38,7 @@
       <br/><br/>🔗 <a href="https://ws2react.valueonsys.com/">ws2react.valueonsys.com</a>
     </td>
     <td width="50%" valign="top" align="center">
-      <a href="https://tugmate.youngyeon.com"><img src="https://img.shields.io/badge/TugMate%20%C2%B7%20%EC%98%88%EC%84%A0%EC%82%AC-Live%20Service-0EA5E9?style=for-the-badge" alt="TugMate · 예선사" height="32" /></a>
+      <a href="https://tugmate.youngyeon.com"><img src="https://tugmate.youngyeon.com/opengraph-image.jpg?opengraph-image.0vony96saq_pc.jpg" alt="TugMate · 예선사" width="100%" /></a>
       <br/><br/><b><a href="https://tugmate.youngyeon.com">TugMate · 예선사</a></b>
       <br/><sub>예선사(Tug Operator) 업무 관리 SaaS. Multi-tenant · PostgreSQL · Prisma · AG Grid.</sub>
       <br/><br/><img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" height="18" /> <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" height="18" /> <img src="https://img.shields.io/badge/AG%20Grid-1B73BA?style=flat-square&logo=aggrid&logoColor=white" alt="AG Grid" height="18" />
@@ -47,11 +47,43 @@
   </tr>
   <tr>
     <td width="50%" valign="top" align="center">
-      <a href="https://mdm.youngyeon.com"><img src="https://mdm.youngyeon.com/og-image.png" alt="KMTC MDM · 기준정보 관리 시스템" width="100%" /></a>
-      <br/><br/><b><a href="https://mdm.youngyeon.com">KMTC MDM · 기준정보 관리 시스템</a></b>
-      <br/><sub>Business Partner · 계정코드 · Freight · Expense · 조직 기준정보를 신청 → 합의 → 승인 → 반영 → 배포(EAI)까지 한 곳에서 관리하는 KMTC 전사 기준정보 관리 시스템</sub>
+      <img src="https://img.shields.io/badge/MDM%20%C2%B7%20%EA%B8%B0%EC%A4%80%EC%A0%95%EB%B3%B4%20%EA%B4%80%EB%A6%AC%20%EC%8B%9C%EC%8A%A4%ED%85%9C-Private-9CA3AF?style=for-the-badge" alt="MDM · 기준정보 관리 시스템" height="32" />
+      <br/><br/><b>🔒 MDM · 기준정보 관리 시스템</b>
+      <br/><sub>Business Partner · 계정코드 · Freight · Expense · 조직 기준정보를 신청 → 합의 → 승인 → 반영 → 배포(EAI)까지 한 곳에서 관리하는 전사 기준정보 관리 시스템.</sub>
       <br/><br/><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" height="18" />
-      <br/><br/>🔗 <a href="https://mdm.youngyeon.com">mdm.youngyeon.com</a>
+      <br/><br/><sub><i>Private service · link disabled</i></sub>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://ffb.co.kr"><img src="https://ffb.co.kr/theme/theme_wide_17/img/ffbt/slide_01.png" alt="Future F Biotech" width="100%" /></a>
+      <br/><br/><b><a href="https://ffb.co.kr">Future F Biotech</a></b>
+      <br/><sub>㈜퓨처에프바이오텍 - 천연물 포스트바이오틱스, 기능성 바이오 소재 글로벌 선도 기술 기업. 건강기능식품 소재 및 제품 연구 개발 전문 서비스 제공.</sub>
+      <br/><br/><img src="https://img.shields.io/badge/Gnuboard-333333?style=flat-square&logo=codio&logoColor=white" alt="Gnuboard" height="18" /> <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" height="18" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" height="18" /> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white" alt="jQuery" height="18" /> <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" height="18" />
+      <br/><br/>🔗 <a href="https://ffb.co.kr">ffb.co.kr</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://www.akpartnersinc.com"><img src="https://www.akpartnersinc.com/images/og.jpg" alt="AKBAR PARTNERS Inc. | Management Consulting &amp; Global Market Entry" width="100%" /></a>
+      <br/><br/><b><a href="https://www.akpartnersinc.com">AKBAR PARTNERS Inc. | Management Consulting &amp; Global Market Entry</a></b>
+      <br/><sub>AKBAR PARTNERS Inc. is a multinational management consulting and professional services network helping companies expand into the GCC and glo…</sub>
+      <br/><br/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" height="18" /> <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML" height="18" /> <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS" height="18" />
+      <br/><br/>🔗 <a href="https://www.akpartnersinc.com">www.akpartnersinc.com</a>
+    </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://stowmate3d.vercel.app"><img src="https://stowmate3d.vercel.app/opengraph-image?6979e6e0d078c015" alt="StowMate 3D — Vessel Stowage Intelligence" width="100%" /></a>
+      <br/><br/><b><a href="https://stowmate3d.vercel.app">StowMate 3D — Vessel Stowage Intelligence</a></b>
+      <br/><sub>선박 적재 계획을 3D로 한눈에. 베이 플랜과 컨테이너 배치를 실시간 3D로 확인하고, 배수량·GM·GZ 복원성과 래싱 안전성까지 함께 검토하는 스토웨이지 대시보드.</sub>
+      <br/><br/><img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" height="18" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" alt="Three.js" height="18" />
+      <br/><br/>🔗 <a href="https://stowmate3d.vercel.app">stowmate3d.vercel.app</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+      <a href="https://oog.valueonsys.com"><img src="https://img.shields.io/badge/VOS--OOG%20%28ValueOnSys%20Out%20of%20Gauge%20System%29-Live%20Service-0EA5E9?style=for-the-badge" alt="VOS-OOG (ValueOnSys Out of Gauge System)" height="32" /></a>
+      <br/><br/><b><a href="https://oog.valueonsys.com">VOS-OOG (ValueOnSys Out of Gauge System)</a></b>
+      <br/><sub>특수 화물(OOG)의 안전한 운송을 위한 웹 기반 래싱(Lashing) 시뮬레이션 및 적재 관리 솔루션.</sub>
+      <br/><br/><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" height="18" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" height="18" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" height="18" /> <img src="https://img.shields.io/badge/MUI-007FFF?style=flat-square&logo=mui&logoColor=white" alt="MUI" height="18" /> <img src="https://img.shields.io/badge/AG%20Grid-1B73BA?style=flat-square&logo=aggrid&logoColor=white" alt="AG Grid" height="18" />
+      <br/><br/>🔗 <a href="https://oog.valueonsys.com">oog.valueonsys.com</a>
     </td>
     <td width="50%" valign="top"></td>
   </tr>

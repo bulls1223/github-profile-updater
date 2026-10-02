@@ -59,7 +59,7 @@ python main.py --dry-run
 You can customize the script by modifying `main.py`:
 -   **`TECH_CONFIG`**: Add or modify badge colors and logos for different technologies.
 -   **`EXTRA_REPO_TECH`**: Manually assign technologies to specific repositories.
--   **`LIVE_PROJECTS`**: Public web services shown as "Recent Work · Live Services" cards. Each entry needs a `url`; `name`, `description`, `image`, `image_mode` (`cover`/`logo`) and `tech` are optional and override the fetched Open Graph values.
+-   **`LIVE_PROJECTS`**: Public web services shown as "Recent Work · Live Services" cards. Each entry needs a `url`; `name`, `description`, `image`, `image_mode` (`cover`/`logo`) and `tech` are optional and override the fetched Open Graph values. Set `disabled: True` (and omit `url`) for confidential work: the card is rendered locked, with no Open Graph fetch, image or link.
 -   **`project_order`**: Define the display order of your projects.
 
 ## 📝 License

@@ -141,6 +141,8 @@ TECH_CONFIG = {
     "PostgreSQL": {"color": "4169E1", "logo": "postgresql"},
     "Prisma": {"color": "2D3748", "logo": "prisma"},
     "AG Grid": {"color": "1B73BA", "logo": "aggrid"},
+    "Three.js": {"color": "000000", "logo": "threedotjs"},
+    "MUI": {"color": "007FFF", "logo": "mui"},
 }
 
 # Manual Tech Stack Enrichment
@@ -193,6 +195,8 @@ EXTRA_REPO_TECH = {
 # (falling back to <title> / <meta name="description">) when the profile is generated.
 # Any of "name", "description", "image" set here overrides the fetched value.
 # "image_mode": "cover" (1200x630 style banner) or "logo" (square icon); auto-detected if omitted.
+# "disabled": True renders a locked card for client/confidential work: no OG fetch, no image,
+# no link. Such entries take "name"/"description" from here only and must not set "url".
 LIVE_PROJECTS = [
     {
         "url": "https://tabmate.valueonsys.com/holiday-run.html",
@@ -213,8 +217,31 @@ LIVE_PROJECTS = [
         "tech": ["Next.js", "React", "PostgreSQL", "Prisma", "AG Grid"],
     },
     {
-        "url": "https://mdm.youngyeon.com",
+        # Confidential client project: shown disabled, client name and URL are not exposed
+        "name": "MDM · 기준정보 관리 시스템",
+        "description": "Business Partner · 계정코드 · Freight · Expense · 조직 기준정보를 신청 → 합의 → 승인 → 반영 → 배포(EAI)까지 한 곳에서 관리하는 전사 기준정보 관리 시스템.",
         "tech": ["React", "Vite"],
+        "disabled": True,
+    },
+    {
+        "url": "https://ffb.co.kr",
+        "name": "Future F Biotech",
+        "tech": ["Gnuboard", "PHP", "MySQL", "jQuery", "Bootstrap"],
+    },
+    {
+        "url": "https://www.akpartnersinc.com",
+        "tech": ["JavaScript", "HTML", "CSS"],
+    },
+    {
+        "url": "https://stowmate3d.vercel.app",
+        "tech": ["Next.js", "React", "Three.js"],
+    },
+    {
+        # The site has no OG tags: name and description come from the project README
+        "url": "https://oog.valueonsys.com",
+        "name": "VOS-OOG (ValueOnSys Out of Gauge System)",
+        "description": "특수 화물(OOG)의 안전한 운송을 위한 웹 기반 래싱(Lashing) 시뮬레이션 및 적재 관리 솔루션.",
+        "tech": ["React", "Vite", "TypeScript", "MUI", "AG Grid"],
     },
 ]
 
@@ -334,6 +361,18 @@ def truncate_text(text, limit):
 
 def resolve_live_project(cfg):
     """Merges LIVE_PROJECTS config with fetched OG metadata into a render-ready dict."""
+    if cfg.get("disabled"):
+        # Disabled entries never hit the network and never carry a URL or image
+        return {
+            "url": "",
+            "name": cfg.get("name") or "Private Project",
+            "description": cfg.get("description", ""),
+            "image": "",
+            "image_mode": "cover",
+            "tech": cfg.get("tech", []),
+            "disabled": True,
+        }
+
     url = cfg["url"]
     og = fetch_og_metadata(url)
 
@@ -357,13 +396,31 @@ def resolve_live_project(cfg):
         "image": image,
         "image_mode": image_mode or "cover",
         "tech": cfg.get("tech", []),
+        "disabled": False,
     }
+
+def shields_text(text):
+    """Escapes text for a shields.io static badge path segment."""
+    return quote(text.replace("-", "--").replace("_", "__"))
 
 def render_live_project_card(project):
     """Renders one project as HTML for use inside a <td> (no Markdown inside HTML blocks)."""
     url = project["url"]
     name = html_lib.escape(project["name"])
     description = html_lib.escape(truncate_text(project["description"], LIVE_PROJECT_DESC_MAX))
+    badges = " ".join(get_badge(t) for t in project["tech"])
+
+    if project.get("disabled"):
+        # Locked card: grey badge, plain (unlinked) title, no URL
+        placeholder = f"https://img.shields.io/badge/{shields_text(project['name'])}-Private-9CA3AF?style=for-the-badge"
+        parts = [f'<img src="{placeholder}" alt="{name}" height="32" />', f'<br/><br/><b>🔒 {name}</b>']
+        if description:
+            parts.append(f'<br/><sub>{description}</sub>')
+        if badges:
+            parts.append(f'<br/><br/>{badges}')
+        parts.append('<br/><br/><sub><i>Private service · link disabled</i></sub>')
+        return "\n".join(parts)
+
     display_url = re.sub(r"^https?://", "", url).rstrip("/")
 
     if project["image"]:
@@ -373,13 +430,12 @@ def render_live_project_card(project):
             img_tag = f'<a href="{url}"><img src="{project["image"]}" alt="{name}" width="100%" /></a>'
     else:
         # No OG image: fall back to a large badge so the card still has a visual anchor
-        placeholder = f"https://img.shields.io/badge/{quote(project['name'])}-Live%20Service-0EA5E9?style=for-the-badge"
+        placeholder = f"https://img.shields.io/badge/{shields_text(project['name'])}-Live%20Service-0EA5E9?style=for-the-badge"
         img_tag = f'<a href="{url}"><img src="{placeholder}" alt="{name}" height="32" /></a>'
 
     parts = [img_tag, f'<br/><br/><b><a href="{url}">{name}</a></b>']
     if description:
         parts.append(f'<br/><sub>{description}</sub>')
-    badges = " ".join(get_badge(t) for t in project["tech"])
     if badges:
         parts.append(f'<br/><br/>{badges}')
     parts.append(f'<br/><br/>🔗 <a href="{url}">{display_url}</a>')
@@ -655,7 +711,7 @@ def main():
     live_projects = []
     for cfg in LIVE_PROJECTS:
         resolved = resolve_live_project(cfg)
-        print(f"  {resolved['name']} ({resolved['url']}) image={'yes' if resolved['image'] else 'no'}")
+        print(f"  {resolved['name']} ({resolved['url'] or 'disabled'}) image={'yes' if resolved['image'] else 'no'}")
         live_projects.append(resolved)
 
     markdown_content = generate_markdown(projects, user.login, STATS_CARD_URL, live_projects)
